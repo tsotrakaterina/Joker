@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JavaScript Joker</title>
+  <style>
+ div{
+ float:left;
+ margin:10px;
+}
+
+#pentada{
+	  font-size:25px;
+	  width:150px;
+	  height:30px;
+	  padding:5px;
+	  border:1px solid black;
+}
+#jocker{
+	  font-size:25px;
+	  width:30px;
+	  height:30px;
+	  padding:5px;
+	  border:1px solid black;
+}
+</style>
+ 
+</head>
+<body>
+<img src="images\joker.jpg" width="300">
+<br>
+<br>
+<button onclick="klirosi()">Κλήρωση</button>
+<br>
+<br>
+<div id="pentada"></div>
+<div id="jocker"></div>
+<script>	
+function klirosi(){
+	var pentada=document.querySelector("#pentada");
+	var n;
+	var p=new Array();
+	for (var i=1;i<=5;i++){
+		do{
+		n=Math.floor(Math.random()*45)+1;
+		} while (p.indexOf(n)!=-1);
+		p.push(n);
+	}
+	var d;
+	d=Math.floor(Math.random()*20)+1;
+	pentada.innerHTML=p;
+	jocker.innerHTML=d;
+}
+
+</script>
+</body>
+</html>
